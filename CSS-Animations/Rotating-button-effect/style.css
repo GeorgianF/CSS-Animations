@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background-color: yellow;
+    z-index: -1;
+    border-radius: 25px;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: transform 0.5s ease-in;    
+}
+
+button:hover:before {
+    transform: rotate(0deg);
+}
