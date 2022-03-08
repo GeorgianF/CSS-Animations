@@ -1,0 +1,59 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #262626;
+    font-family: sans-serif;
+    font-size: 40px;
+    padding: 40px 80px;
+    border: 3px solid white;
+    position: relative;
+    color: transparent;
+    overflow: hidden;
+}
+
+a::before {
+    content: "Ready?";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: all 0.5s;
+}
+
+a::after {
+    content: "To rumble";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: all 0.5s;
+    transform: translate(-100%, 100%);
+}
+
+a:hover::before {
+    transform: translate(100%, -100%);
+}
+
+a:hover::after {
+    transform: translate(0%, 0%);
+}
